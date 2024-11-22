@@ -1,0 +1,13 @@
+pipline {
+  agent any
+  triggers{
+    githubpush()
+  }
+  stages{
+    stage(checkout){
+      steps{
+        checkout scm
+      }
+    }
+  }
+}
